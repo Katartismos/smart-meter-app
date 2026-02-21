@@ -7,7 +7,7 @@ const Nav = () => {
         </svg>
         <span className="text-xl font-bold tracking-wide"> MeterHub </span>
       </div>
-      <div className="hidden md:flex space-x-8 text-sm font-medium text-green-50">
+      <div className="hidden space-x-8 text-sm font-medium text-green-50">
         <a href="#" className="hover:text-white transition-colors">Home</a>
         <a href="#" className="text-white border-b-2 border-green-400 pb-1">Track</a>
         <a href="#" className="hover:text-white transition-colors">Support</a>
