@@ -6,7 +6,7 @@ import StatusTracker from './components/StatusTracker'
 import type { FormData, ApplicationStatus } from './lib/types'
 
 export default function VoltStreamApp() {
-  const [status, setStatus] = useState<ApplicationStatus>('processing');
+  const [status, setStatus] = useState<ApplicationStatus>('idle');
   const [error, setError] = useState<string>('');
 
   // Local state for the form UI
@@ -42,7 +42,7 @@ export default function VoltStreamApp() {
     if (status === 'processing') {
       timer = setTimeout(() => {
         setStatus('ready');
-      }, 15000); // 15-second simulated wait
+      }, 5000); // 15-second simulated wait
     }
     return () => clearTimeout(timer); // Cleanup if component unmounts
   }, [status]);
